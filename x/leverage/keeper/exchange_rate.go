@@ -43,7 +43,7 @@ func (k Keeper) ExchangeUToken(ctx sdk.Context, uToken sdk.Coin) (sdk.Coin, erro
 	return sdk.NewCoin(tokenDenom, tokenAmount), nil
 }
 
-// DeriveExchangeRate calculated the token:uToken exchange rate of a base token denom.
+// DeriveExchangeRate calculates the token:uToken exchange rate of a base token denom.
 func (k Keeper) DeriveExchangeRate(ctx sdk.Context, denom string) sdk.Dec {
 	// uToken exchange rate is equal to the token supply (including borrowed
 	// tokens yet to be repaid and excluding tokens reserved) divided by total
